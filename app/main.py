@@ -64,10 +64,7 @@ def downloadFile ():
 @app.route('/reset')
 def remove():
     path = "../tmp/dataset.csv"
-    try:
-        os.remove(path)
-    except:
-        pass
+    os.remove(path)
     return render_template("500.html")
 
 
